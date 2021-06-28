@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'stylesheets/fontello/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheets/styles.css' %}">
+    <title>OKSS | Home</title>
+</head>
+<body>
+    <nav class="fake-nav">
+        <div href="{% url 'home:homepage' %}"><span class="icon-home-6"></span></div>
+        <div href="{% url 'subjects:resources' %}"><span class="icon-sticky-note"></span></div>
+        <div href="{% url 'news:home' %}"><span class="icon-newspaper-2"></span></div>
+        <div href="{% url 'about:home' %}"><span class="icon-info-3"></span></div>
+    </nav>
+    <nav id="nav-menu">
+        <a href="{% url 'home:homepage' %}" class="link"><span class="icon-home-6"></span></a>
+        <a href="{% url 'subjects:resources' %}" class="link"><span class="icon-sticky-note"></span></a>
+        <a href="{% url 'news:home' %}" class="link"><span class="icon-newspaper-2"></span></a>
+        <a href="{% url 'about:home' %}" class="link"><span class="icon-info-3"></span></a>
+    </nav>
+    <div class="body-wrapper">
+        <div class="body-overlay"></div>
+        <header>
+            <div class="site-title">
+                <h4>OKSS</h4>
+                <p class="periods">..</p>
+            </div>
+            <div class="slogan">
+                <h4>
+                    Welcome to the OKSS Student <br>
+                    Portal
+                </h4>
+            </div>
+            <div class="activities">
+                <div class="activity-one">
+                    Get Study Material
+                </div>
+                <div class="activity-two">
+                    Revise
+                </div>
+                <div class="activity-three">
+                    Communication And News
+                </div>
+            </div>
+        </header>
+        <main>
+            <article class="article-1">
+                <h4>Popular</h4>
+                <div class="article-content">
+                    <div class="article-head">
+                        <div class="img-field"><span class="icon-user-o"></span></div>
+                        <div class="article-titles">
+                            <h5>{{popular.name}}</h5>
+                            <h6>{{popular.title}}</h6>
+                        </div>
+                    </div>
+                    <div class="article-body">
+                        {{popular.snippet}}
+                    </div>
+                    <div parent="popular" class="read-more">
+                        Read More
+                    </div>
+                </div>
+            </article>
+            <article class="article-2">
+                <h4>Qns Of The Day</h4>
+                <div class="article-content">
+                    <div class="article-head">
+                        <h6>{{question.subject}}</h6>
+                        <h5>{{question}}</h5>
+                    </div>
+                    <div class="article-body">
+                        {{question.snippet}}
+                    </div>
+                    <div class="read-more" parent="question">
+                        Read More
+                    </div>
+                </div>
+            </article>
+            <article class="article-3">
+                <h4>New Questions</h4>
+                <div class="article-content">
+                    <div class="article-head">
+                        <h6>{{subject.title}}</h6>
+                        <h5>{{subject.upload_date}}</h5>
+                    </div>
+                    <div class="article-body">
+                        Lorem Ipsum dot selir te necs dot lorem dot lor rem
+                        les psum ...
+                    </div>
+                    <div class="read-more" role="download">
+                        Download
+                    </div>
+                    <a href="{{subject.file.url}}" download="" id="download-link" class="not-display-link"></a>
+                </div>
+            </article>
+        </main>
+        <div class="modal-boxes">
+            <article class="modal-article-1">
+                <div class="article-content">
+                    <div class="article-head">
+                        <div class="img-field"><span class="icon-user-o"></span></div>
+                        <div class="article-titles">
+                            <h5>{{popular.name}}</h5>
+                            <h6>{{popular.title}}</h6>
+                        </div>
+                    </div>
+                    <div class="article-body">
+                        {{popular.message}}
+                    </div>
+                    <div class="read-more" role="close-1">
+                        Close
+                    </div>
+                </div>
+            </article>
+            <article class="modal-article-2">
+                <div class="article-content">
+                    <div class="article-head">
+                        <h6>{{question.subject}}</h6>
+                        <h5>{{question}}</h5>
+                    </div>
+                    <div class="article-body">
+                        {{question.answer}}
+                    </div>
+                    <div class="read-more" role="close-2">
+                        Close
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <script src="{% static 'scripts/app.js' %}"></script>
+    <script src="{% static 'scripts/app-home.js' %}"></script>
+</body>
+</html>

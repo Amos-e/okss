@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    outline-style: none;
+
+}
+body {
+    background: #141e26;
+}
+h4 {
+    color: #e3e5e4;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+h5 {
+    color: #494c59;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+h6 {
+    color: #494c59;
+    font-size: 1em;
+}
+
+/* NAV MENU */
+.body-wrapper {
+    height: 92vh;
+    overflow-y: scroll;
+}
+.fake-nav {
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+    background: #1d2730;
+    display: flex;
+    justify-content: space-around;
+}
+.fake-nav div {
+    line-height: 8vh;
+    font-size: 1.4em;
+    color: #656a7b;
+}
+#nav-menu {
+    display: none !important;
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+    background: #1d2730;
+    display: flex;
+    justify-content: space-around;
+}
+#nav-menu a {
+    display: block;
+    text-decoration: none;
+    line-height: 8vh;
+    font-size: 1.4em;
+}
+
+/* HEADER STYLES */
+header {
+    padding: 1.2em 1em;
+}
+header .header-tagline {
+    color: #e3e5e3;
+    padding: .6em 0;
+    font-size: .95em;
+}
+header .branch-select h5 {
+    margin: 1em 0 0 0;
+    color: #e3e5e4 !important;
+    text-align: center;
+}
+
+
+/* SUBJECT STYLES */
+main {
+    padding: 0 1em;
+}
+main .subject {
+    display: block;
+    text-decoration: none;
+    height: 4em;
+    background: #1c232e;
+    display: flex;
+    height: 3.6em;
+    border-radius: .2em;
+    margin-bottom: .8em;
+}
+main .subject a {
+    display: none;
+}
+.subject .number {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin: .3em .8em;
+    text-align: center;
+    line-height: 3em;
+    color: #353c47;
+    background: #585f6b;
+}
+.subject .name {
+    line-height: 2.8em;
+    padding-left: .4em;
+    font-size: 1.3em;
+    color: #686f79;
+}
+
+/*SUBJECT DETAILS*/
+.sub {
+    display: block;
+    text-decoration: none;
+    border-radius: .2em;
+    margin-bottom: .8em;
+    display: flex;
+    justify-content: space-between;
+    background: #1c232e;
+    color: #e3e5e4;
+    height: 3.2em;
+    padding: .4em 2em;
+    padding-left: 1em;
+}
+.sub a {
+    display: none;
+}
+.sub .desc {
+    font-size: 0.95em;
+    line-height: 1.4em;
+}
+.sub .icon {
+    color: #179e75;
+    line-height: 3.2em;
+}

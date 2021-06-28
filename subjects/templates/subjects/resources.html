@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'stylesheets/fontello/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheets/resources.css' %}">
+    <title>OKSS | Resources</title>
+</head>
+<body>
+    <div class="body-wrapper">
+        <nav class="fake-nav">
+            <div href="{% url 'home:homepage' %}"><span class="icon-home-6"></span></div>
+            <div href="{% url 'subjects:resources' %}"><span class="icon-sticky-note"></span></div>
+            <div href="{% url 'news:home' %}"><span class="icon-newspaper-2"></span></div>
+            <div href="{% url 'about:home' %}"><span class="icon-info-3"></span></div>
+        </nav>
+        <nav id="nav-menu">
+            <a href="{% url 'home:homepage' %}" class="link"><span class="icon-home-6"></span></a>
+            <a href="{% url 'subjects:resources' %}" class="link"><span class="icon-sticky-note"></span></a>
+            <a href="{% url 'news:home' %}" class="link"><span class="icon-newspaper-2"></span></a>
+            <a href="{% url 'about:home' %}" class="link"><span class="icon-info-3"></span></a>
+        </nav>
+        <header>
+            <h4>Study Materials</h4>
+            <div class="header-tagline">
+                We have gathered some study files for you <br>
+                to go through. Both notes and questions.
+            </div>
+            <div class="branch-select">
+                <h5>SUBJECTS</h5>
+            </div>
+        </header>
+        <main>
+            <div class="subject">
+                <div class="number">
+                    1
+                </div>
+                <div class="name">
+                    Mathematics
+                </div>
+                <a href="/subjects/mathematics-detail"></a>
+            </div>
+            <div class="subject">
+                <div class="number">
+                    2
+                </div>
+                <div class="name">
+                    Physics
+                </div>
+                <a href="/subjects/physics-detail"></a>
+            </div>
+            <div class="subject">
+                <div class="number">
+                    3
+                </div>
+                <div class="name">
+                    Chemistry
+                </div>
+                <a href="/subjects/chemistry-detail"></a>
+            </div>
+            <div class="subject">
+                <div class="number">
+                    4
+                </div>
+                <div class="name">
+                    Biology
+                </div>
+                <a href="/subjects/biology-detail"></a>
+            </div>
+            <div class="subject">
+                <div class="number">
+                    5
+                </div>
+                <div class="name">
+                    English
+                </div>
+                <a href="/subjects/english-detail"></a>
+            </div>
+            <div class="subject">
+                <div class="number">
+                    6
+                </div>
+                <div class="name">
+                    Geography
+                </div>
+                <a href="/subjects/geography-detail"></a>
+            </div>
+            <div class="subject">
+                <div class="number">
+                    7
+                </div>
+                <div class="name">
+                    History
+                </div>
+                <a href="/subjects/history-detail"></a>
+            </div>
+            <div class="subject">
+                <div class="number">
+                    8
+                </div>
+                <div class="name">
+                    Commerce
+                </div>
+                <a href="/subjects/commerce-detail"></a>
+            </div>
+        </main>
+    </div>
+    <script src="{% static 'scripts/app.js' %}"></script>
+    <script src="{% static 'scripts/app-subjects.js' %}"></script>
+</body>
+</html>

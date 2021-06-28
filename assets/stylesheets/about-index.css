@@ -1,0 +1,134 @@
+:root {
+    --green: #64bda4;
+    --main-bg: #151f27;
+}
+/* UNIVERSAL STYLES */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    background: #151f27;
+}
+h4 {
+    color: #e3e5e4;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+h5 {
+    color: #494c59;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+h6 {
+    color: #494c59;
+    font-size: 1em;
+}
+
+/* NAV BAR */
+.body-wrapper {
+    height: 92vh;
+    overflow-y: scroll;
+}
+.fake-nav {
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+    background: #1d2730;
+    display: flex;
+    justify-content: space-around;
+}
+.fake-nav div {
+    line-height: 8vh;
+    font-size: 1.4em;
+    color: #656a7b;
+}
+#nav-menu {
+    display: none !important;
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+    background: #1d2730;
+    display: flex;
+    justify-content: space-around;
+}
+#nav-menu a {
+    display: block;
+    text-decoration: none;
+    line-height: 8vh;
+    font-size: 1.4em;
+}
+
+/* Coming Soon */
+.main1 {
+    padding: 1.2em 1em;
+}
+.main1 > h4 {
+    margin-bottom: .6em;
+}
+.main1 > h5 {
+    color: var(--green);
+    margin-bottom: .4em;
+    font-weight: 500;
+}
+.main1 form input {
+    display: block;
+    margin-bottom: .6em;
+    padding: .4em;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.main1 form textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 6em;
+    max-height: 6em;
+    outline: none;
+    padding: .4em;
+}
+.main1 form input[type="submit"] {
+    background-color: var(--green);
+    color: #e3e5e4;
+}
+
+.main1 .modal1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 90%;
+    height: 30%;
+    background: var(--main-bg);
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    display: none;
+}
+.main1 .modal1 h4 {
+    text-align: center;
+    margin-top: 3.2em;
+}
+.main1 .modal1 p {
+    color: #e3e5e4;
+    background: var(--green);
+    width: 90%;
+    margin: .4em auto;
+    text-align: center;
+    padding: .4em;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+.main1 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 92vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.95);
+    z-index: 1;
+    display: none;
+}

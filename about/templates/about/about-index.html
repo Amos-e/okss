@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'stylesheets/fontello/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheets/about-index.css' %}">
+    <title>OKSS | NEWS</title>
+</head>
+<body>
+    <div class="body-wrapper">
+        <nav class="fake-nav">
+            <div href="{% url 'home:homepage' %}"><span class="icon-home-6"></span></div>
+            <div href="{% url 'subjects:resources' %}"><span class="icon-sticky-note"></span></div>
+            <div href="{% url 'news:home' %}"><span class="icon-newspaper-2"></span></div>
+            <div href="{% url 'about:home' %}"><span class="icon-info-3"></span></div>
+        </nav>
+        <nav id="nav-menu">
+            <a href="{% url 'home:homepage' %}" class="link"><span class="icon-home-6"></span></a>
+            <a href="{% url 'subjects:resources' %}" class="link"><span class="icon-sticky-note"></span></a>
+            <a href="{% url 'news:home' %}" class="link"><span class="icon-newspaper-2"></span></a>
+            <a href="{% url 'about:home' %}" class="link"><span class="icon-info-3"></span></a>
+        </nav>
+        <main class="main1">
+            <h4>About</h4>
+            <h5>Get In Touch</h5>
+            <div class="main-form">
+                <form action="">
+                    <input type="text" placeholder="Subject">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message"></textarea>
+                    <input type="Submit">
+                </form>
+            </div>
+            <div class="modal1">
+                <h4>Message Sent</h4>
+                <p id="submit">Okay</p>
+            </div>
+            <div class="overlay"></div>
+        </main>
+    </div>
+    <script src="{% static 'scripts/app.js' %}"></script>
+    <script src="{% static 'scripts/app-about.js' %}"></script>
+</body>
+</html>
