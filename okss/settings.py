@@ -25,7 +25,7 @@ SECRET_KEY = 'f)(!iq)s_vg8bp-(1rz44x1$5#%j7m2lw!o1%-l+39!-kl9*br'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'okss.onrender.com']
 
 
 # Application definition
